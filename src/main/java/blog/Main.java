@@ -25,19 +25,19 @@ public final class Main {
                 .build();
     }
 
-    public static void main(String[] args) throws Exception {
-        Server server = newServer(8080);
-
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            server.stop().join();
-            logger.info("Server has been stopped.");
-        }));
-
-        server.start().join();
-
-        logger.info("Server has been started. Serving DocService at http://127.0.0.1:{}/docs",
-                server.activeLocalPort());
-    }
+//    public static void main(String[] args) throws Exception {
+//        Server server = newServer(8080);
+//
+//        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+//            server.stop().join();
+//            logger.info("Server has been stopped.");
+//        }));
+//
+//        server.start().join();
+//
+//        logger.info("Server has been started. Serving DocService at http://127.0.0.1:{}/docs",
+//                server.activeLocalPort());
+//    }
 
 }
 

@@ -21,6 +21,7 @@ import com.linecorp.armeria.server.annotation.ProducesJson;
 import com.linecorp.armeria.server.annotation.Put;
 import com.linecorp.armeria.server.annotation.RequestConverter;
 import com.linecorp.armeria.server.annotation.RequestObject;
+import io.micrometer.core.annotation.Timed;
 
 public final class BlogService {
 
@@ -56,6 +57,7 @@ public final class BlogService {
      */
     @Get("/blogs")
     @ProducesJson
+    @Timed(value = "user.status", longTask = true)
     public Iterable<BlogPost> getBlogPosts(@Param @Default("true") boolean descending) {
         if (descending) {
             return blogPosts.entrySet()
