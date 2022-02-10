@@ -1,11 +1,11 @@
 package blog;
 
 public final class BlogPost {
-    private final int id;           // The post ID
-    private final String title;     // The post title
-    private final String content;   // The post content
-    private final long createdAt;   // The time post is created at
-    private final long modifiedAt;  // The time post is modified at
+    private final int id;
+    private final String title;
+    private final String content;
+    private final long createdAt;
+    private final long modifiedAt;
 
     BlogPost(int id, String title, String content) {
         this(id, title, content, System.currentTimeMillis());

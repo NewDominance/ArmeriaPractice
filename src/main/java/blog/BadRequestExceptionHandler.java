@@ -9,10 +9,6 @@ import com.linecorp.armeria.common.HttpStatus;
 import com.linecorp.armeria.server.ServiceRequestContext;
 import com.linecorp.armeria.server.annotation.ExceptionHandlerFunction;
 
-/**
- * Handles an {@link IllegalArgumentException} and returns an {@link HttpResponse} with
- * {@link HttpStatus#BAD_REQUEST}.
- */
 public class BadRequestExceptionHandler implements ExceptionHandlerFunction {
 
     private static final ObjectMapper mapper = new ObjectMapper();

@@ -16,12 +16,12 @@ public final class Main {
         DocService docService =
                 DocService.builder()
                         .exampleRequests(BlogService.class,
-                                "createBlogPost", // Name of service method
+                                "createBlogPost",
                                 "{\"title\":\"My first blog\", \"content\":\"Hello Armeria!\"}")
                         .build();
         return sb.http(port)
                 .annotatedService(new BlogService())
-                .serviceUnder("/docs", docService)  // Add Documentation service
+                .serviceUnder("/docs", docService)  //doc 서비스추가
                 .build();
     }
 

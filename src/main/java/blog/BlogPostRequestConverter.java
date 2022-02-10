@@ -31,7 +31,7 @@ final class BlogPostRequestConverter implements RequestConverterFunction {
             int id = idGenerator.getAndIncrement();
             String title = stringValue(jsonNode, "title");
             String content = stringValue(jsonNode, "content");
-            return new BlogPost(id, title, content); // Create an instance of BlogPost object
+            return new BlogPost(id, title, content);
         }
         return RequestConverterFunction.fallthrough();
     }
